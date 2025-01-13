@@ -1,0 +1,164 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mauya Restaurant</title>
+  <style>
+    /* Embedded CSS */
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      margin: 0;
+      padding: 0;
+      background-color: #f9f9f9;
+    }
+
+    header {
+      background-color: #333;
+      color: #fff;
+      padding: 1rem 0;
+      text-align: center;
+    }
+
+    header nav ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    header nav ul li {
+      display: inline;
+      margin: 0 15px;
+    }
+
+    header nav ul li a {
+      color: #fff;
+      text-decoration: none;
+    }
+
+    .search-container {
+      text-align: center;
+      margin: 20px 0;
+    }
+
+    #search-bar {
+      width: 80%;
+      padding: 10px;
+      font-size: 16px;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+    }
+
+    section {
+      padding: 20px;
+    }
+
+    h1, h2, h3 {
+      color: #333;
+    }
+
+    .menu-category {
+      margin-bottom: 20px;
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    ul li {
+      background: #fff;
+      border: 1px solid #ddd;
+      margin-bottom: 5px;
+      padding: 10px;
+      border-radius: 5px;
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    }
+
+    footer {
+      background-color: #333;
+      color: #fff;
+      text-align: center;
+      padding: 10px 0;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Welcome to Mauya Restaurant</h1>
+    <nav>
+      <ul>
+        <li><a href="#local-menu">Local Menu</a></li>
+        <li><a href="#international-menu">International Menu</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <div class="search-container">
+    <input type="text" id="search-bar" placeholder="Search menu items...">
+  </div>
+
+  <section id="local-menu">
+    <h2>Local Menu</h2>
+    <div class="menu-category">
+      <h3>Bites</h3>
+      <ul>
+        <li>Bagia - 1,000/=</li>
+        <li>Sambusa - 1,000/=</li>
+        <li>Maandazi - 500/=</li>
+        <li>Sausage Rolls - 1,000/=</li>
+      </ul>
+    </div>
+    <div class="menu-category">
+      <h3>Soups</h3>
+      <ul>
+        <li>Mbuzi Soup - 3,000/=</li>
+        <li>Ng'ombe Soup - 2,500/=</li>
+        <li>Utumbo Soup - 2,000/=</li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="international-menu">
+    <h2>International Menu</h2>
+    <div class="menu-category">
+      <h3>Starters</h3>
+      <ul>
+        <li>Vegetable Soup - 2,000/=</li>
+        <li>Mushroom Soup - 2,500/=</li>
+        <li>Mutton Soup - 3,000/=</li>
+      </ul>
+    </div>
+    <div class="menu-category">
+      <h3>Chicken</h3>
+      <ul>
+        <li>Chicken Masala - 16,500/=</li>
+        <li>BBQ Chicken - 14,000/=</li>
+        <li>Chicken Tikka Masala - 12,000/=</li>
+      </ul>
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2025 Mauya Restaurant. All rights reserved.</p>
+  </footer>
+
+  <script>
+    // Embedded JavaScript for search functionality
+    document.getElementById('search-bar').addEventListener('keyup', function () {
+      let filter = this.value.toLowerCase();
+      let menuItems = document.querySelectorAll('ul li');
+
+      menuItems.forEach(function (item) {
+        if (item.textContent.toLowerCase().includes(filter)) {
+          item.style.display = '';
+        } else {
+          item.style.display = 'none';
+        }
+      });
+    });
+  </script>
+</body>
+</html>
